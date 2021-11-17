@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/react-gh-pages/static/css/main.c8730b8e.chunk.css",
+    "main.js": "/react-gh-pages/static/js/main.3b26534f.chunk.js",
+    "main.js.map": "/react-gh-pages/static/js/main.3b26534f.chunk.js.map",
+    "runtime-main.js": "/react-gh-pages/static/js/runtime-main.160a724e.js",
+    "runtime-main.js.map": "/react-gh-pages/static/js/runtime-main.160a724e.js.map",
+    "static/js/2.6f776120.chunk.js": "/react-gh-pages/static/js/2.6f776120.chunk.js",
+    "static/js/2.6f776120.chunk.js.map": "/react-gh-pages/static/js/2.6f776120.chunk.js.map",
+    "static/js/3.f17af30a.chunk.js": "/react-gh-pages/static/js/3.f17af30a.chunk.js",
+    "static/js/3.f17af30a.chunk.js.map": "/react-gh-pages/static/js/3.f17af30a.chunk.js.map",
+    "index.html": "/react-gh-pages/index.html",
+    "static/css/main.c8730b8e.chunk.css.map": "/react-gh-pages/static/css/main.c8730b8e.chunk.css.map",
+    "static/js/2.6f776120.chunk.js.LICENSE.txt": "/react-gh-pages/static/js/2.6f776120.chunk.js.LICENSE.txt",
+    "static/media/Easy.87b42cf8.jpg": "/react-gh-pages/static/media/Easy.87b42cf8.jpg",
+    "static/media/EasyCharacterOne.5be51d75.PNG": "/react-gh-pages/static/media/EasyCharacterOne.5be51d75.PNG",
+    "static/media/EasyCharacterThree.47d20aae.PNG": "/react-gh-pages/static/media/EasyCharacterThree.47d20aae.PNG",
+    "static/media/EasyCharacterTwo.2cd8e64b.PNG": "/react-gh-pages/static/media/EasyCharacterTwo.2cd8e64b.PNG",
+    "static/media/Hard.90eab6a4.jpg": "/react-gh-pages/static/media/Hard.90eab6a4.jpg",
+    "static/media/HardCharacterOne.bb831a70.PNG": "/react-gh-pages/static/media/HardCharacterOne.bb831a70.PNG",
+    "static/media/HardCharacterThree.d760c357.PNG": "/react-gh-pages/static/media/HardCharacterThree.d760c357.PNG",
+    "static/media/HardCharacterTwo.dc98c636.PNG": "/react-gh-pages/static/media/HardCharacterTwo.dc98c636.PNG",
+    "static/media/Normal.6465c10a.jpg": "/react-gh-pages/static/media/Normal.6465c10a.jpg",
+    "static/media/NormalCharacterOne.1048738c.PNG": "/react-gh-pages/static/media/NormalCharacterOne.1048738c.PNG",
+    "static/media/NormalCharacterThree.2be2dcd6.PNG": "/react-gh-pages/static/media/NormalCharacterThree.2be2dcd6.PNG",
+    "static/media/NormalCharacterTwo.d504b113.PNG": "/react-gh-pages/static/media/NormalCharacterTwo.d504b113.PNG"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.160a724e.js",
+    "static/js/2.6f776120.chunk.js",
+    "static/css/main.c8730b8e.chunk.css",
+    "static/js/main.3b26534f.chunk.js"
+  ]
+}
