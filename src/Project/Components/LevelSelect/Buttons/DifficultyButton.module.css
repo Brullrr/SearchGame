@@ -1,0 +1,18 @@
+.DifficultyButton {
+    width: 25%;
+    justify-self: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 24px;
+}
+.DifficultyButton:hover {
+    cursor: pointer;
+    background-size: 200% 200%;
+    transition: 3s ease-in-out;
+}
+
+.DifficultyButton p {
+    background-color: rgba(0, 0, 0, 0.555);
+    color: white;
+    font-size: calc(3vh + 2vw);
+}

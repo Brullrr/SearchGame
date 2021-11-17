@@ -1,0 +1,119 @@
+.ModalBody {
+    position: absolute;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 10vh 70vh 10vh;
+    text-align: center;
+    width: 60vw;
+    min-width: 400px;
+    height: 90vh;
+    left: 20vw;
+    top: 5vh;
+    box-shadow: 0px 0px 2px 5px grey;
+    border-radius: 24px;
+    background-color: rgb(184, 179, 179);
+}
+
+.TitleCard {
+    width: 70%;
+    padding: 0px;
+    
+    margin: 0px;
+    margin-left: 15%;
+    display: grid;
+    grid-template-columns: 5% auto 10%;
+    
+}
+
+.ScoreHolder {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(20, 3.5vh);   
+}
+
+.ScoreHolder .ScoreList:nth-child(7n + 1) {
+    color: rgb(90, 25, 25);
+}
+.ScoreHolder .ScoreList:nth-child(7n + 2) {
+    color: rgb(151, 93, 0);
+}
+.ScoreHolder .ScoreList:nth-child(7n + 3) {
+    color: rgb(80, 80, 0);
+}
+.ScoreHolder .ScoreList:nth-child(7n + 4) {
+    color: rgb(0, 85, 0);
+}
+.ScoreHolder .ScoreList:nth-child(7n + 5) {
+    color: rgb(0, 0, 100);
+}
+.ScoreHolder .ScoreList:nth-child(7n + 6) {
+    color: rgb(80, 0, 80);
+}
+.ScoreHolder .ScoreList:nth-child(7n + 7) {
+    color: rgb(19, 1, 38);
+}
+
+.ScoreList {
+    box-sizing: border-box;
+    border-bottom: 1px dotted black;
+    width: 70%;
+    padding: 0px;
+    margin: 0px;
+    margin-left: 15%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.ScoreList p:nth-child(1) {
+    padding: 0px;
+    margin: 0px;
+    display: block;
+    line-height: 3.5vh;
+    font-weight: bold;
+    font-size: calc(1.5vh + 1.5vw);
+    justify-self: start;
+}
+.ScoreList p:nth-child(2) {
+    padding: 0px;
+    margin: 0px;
+    display: block;
+
+    line-height: 3.5vh;
+    
+    font-size: calc(1.5vh + 1.5vw);
+    justify-self: center;
+}
+.ScoreList p:nth-child(3) {
+    padding: 0px;
+    margin: 0px;
+    display: block;
+    line-height: 3.5vh;
+    font-size: calc(1.5vh + 1.5vw);
+    justify-self: end;
+}
+
+
+.ModalBody button {
+    width: 30%;
+    margin: 1.5vh 0px 0px 35%;
+    height: 7vh;
+    font-size: calc(1.5vh + 1.5vw);
+    border-radius: calc(1vh + 1vw);
+    cursor: pointer;
+    background: linear-gradient(red, blue);
+    background-clip: text;
+    color: transparent;
+    border-color: purple;
+}
+
+.ModalBody button:hover {
+    animation: textDance 1s linear;
+}
+
+@keyframes textDance {
+    0% {transform: scale(1, 1);}
+    20% {transform: scale(1, .5);}
+    40% {transform: scale(1, 1);}
+    60% {transform: scale(1, .5);}
+    80% {transform: scale(1, 1);}
+}
