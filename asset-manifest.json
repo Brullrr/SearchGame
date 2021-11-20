@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/SearchGame/static/css/main.c8730b8e.chunk.css",
-    "main.js": "/SearchGame/static/js/main.3b26534f.chunk.js",
-    "main.js.map": "/SearchGame/static/js/main.3b26534f.chunk.js.map",
-    "runtime-main.js": "/SearchGame/static/js/runtime-main.fda356c8.js",
-    "runtime-main.js.map": "/SearchGame/static/js/runtime-main.fda356c8.js.map",
-    "static/js/2.6f776120.chunk.js": "/SearchGame/static/js/2.6f776120.chunk.js",
-    "static/js/2.6f776120.chunk.js.map": "/SearchGame/static/js/2.6f776120.chunk.js.map",
-    "static/js/3.f17af30a.chunk.js": "/SearchGame/static/js/3.f17af30a.chunk.js",
-    "static/js/3.f17af30a.chunk.js.map": "/SearchGame/static/js/3.f17af30a.chunk.js.map",
+    "main.js": "/SearchGame/static/js/main.c5d92ca7.chunk.js",
+    "main.js.map": "/SearchGame/static/js/main.c5d92ca7.chunk.js.map",
+    "runtime-main.js": "/SearchGame/static/js/runtime-main.6fba7ec4.js",
+    "runtime-main.js.map": "/SearchGame/static/js/runtime-main.6fba7ec4.js.map",
+    "static/js/2.ddde8d0f.chunk.js": "/SearchGame/static/js/2.ddde8d0f.chunk.js",
+    "static/js/2.ddde8d0f.chunk.js.map": "/SearchGame/static/js/2.ddde8d0f.chunk.js.map",
+    "static/js/3.6fd129c0.chunk.js": "/SearchGame/static/js/3.6fd129c0.chunk.js",
+    "static/js/3.6fd129c0.chunk.js.map": "/SearchGame/static/js/3.6fd129c0.chunk.js.map",
     "index.html": "/SearchGame/index.html",
     "static/css/main.c8730b8e.chunk.css.map": "/SearchGame/static/css/main.c8730b8e.chunk.css.map",
-    "static/js/2.6f776120.chunk.js.LICENSE.txt": "/SearchGame/static/js/2.6f776120.chunk.js.LICENSE.txt",
+    "static/js/2.ddde8d0f.chunk.js.LICENSE.txt": "/SearchGame/static/js/2.ddde8d0f.chunk.js.LICENSE.txt",
     "static/media/Easy.87b42cf8.jpg": "/SearchGame/static/media/Easy.87b42cf8.jpg",
     "static/media/EasyCharacterOne.5be51d75.PNG": "/SearchGame/static/media/EasyCharacterOne.5be51d75.PNG",
     "static/media/EasyCharacterThree.47d20aae.PNG": "/SearchGame/static/media/EasyCharacterThree.47d20aae.PNG",
@@ -26,9 +26,9 @@
     "static/media/NormalCharacterTwo.d504b113.PNG": "/SearchGame/static/media/NormalCharacterTwo.d504b113.PNG"
   },
   "entrypoints": [
-    "static/js/runtime-main.fda356c8.js",
-    "static/js/2.6f776120.chunk.js",
+    "static/js/runtime-main.6fba7ec4.js",
+    "static/js/2.ddde8d0f.chunk.js",
     "static/css/main.c8730b8e.chunk.css",
-    "static/js/main.3b26534f.chunk.js"
+    "static/js/main.c5d92ca7.chunk.js"
   ]
 }
