@@ -9,7 +9,6 @@ const WelcomeModal = () => {
     
 
     const playerName = useSelector(state => state.playerNameSlice.playerName)
-    console.log('WelcomeModal playerNAme is   :   ' + playerName)
     const changePlayerNameHandler = (name) => {
         dispatch(playerNameSliceActions.changePlayerName(name))
     }

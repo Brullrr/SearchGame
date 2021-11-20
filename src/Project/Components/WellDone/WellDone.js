@@ -9,7 +9,20 @@ const WellDone = () => {
     
     const [timesSaved, setTimesSaved] = useState([]);
     const [userTime, setUserTime] = useState(0)
-    let timeToReduce = timesSaved.length > 0 ? timesSaved[timesSaved.length -1].time : 0;
+
+    let correctTime = ''
+    let level = 'unknown'
+    const timeStoredFromState = useSelector(state => state.startTimeSlice.startTime)
+    console.log('Time in state:   ' + timeStoredFromState)
+
+    timesSaved.forEach(e=> {
+        console.log('Time in state:   ' + timeStoredFromState)
+        if(e.time === timeStoredFromState) {
+            correctTime = e.time
+            level = e.level
+        }
+    })
+    let timeToReduce = timesSaved.length > 0 ? correctTime : 0;
 
     
     const getStartTime = useCallback( async () => {
@@ -20,7 +33,8 @@ const WellDone = () => {
         loadedTimes.push({
             id: key,
             time: data[key].timeStart,
-            name: data[key].user
+            name: data[key].user,
+            level: data[key].level
         })
     }
     setTimesSaved(loadedTimes)
@@ -42,11 +56,12 @@ const WellDone = () => {
         if(userTime > 1000){
             addHighScore({
                 userName:  userName,
-                userTime: (Date.now() - timeToReduce)/1000 
+                userTime: (Date.now() - timeToReduce)/1000,
+                userLevel: level
             });
         }
         
-    }, [addHighScore, timeToReduce, userName]);
+    }, [addHighScore, timeToReduce, userName, level]);
 
 
     const goToLevelSelect = () => {

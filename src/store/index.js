@@ -10,6 +10,7 @@ import gameOngoingReducer from './gameOngoingSlice';
 import wellDoneReducer from './wellDoneSlice';
 import playerNameReducer from './playerNameSlice';
 import highScoresReducer from './highScoresSlice';
+import startTimeReducer from './startTimeSlice';
 
 const reducers = combineReducers({
     FirstTimeSlice: FirstTimeReducer,
@@ -18,7 +19,8 @@ const reducers = combineReducers({
     gameOngoingSlice: gameOngoingReducer,
     wellDoneSlice: wellDoneReducer,
     playerNameSlice: playerNameReducer,
-    highScoresSlice: highScoresReducer
+    highScoresSlice: highScoresReducer,
+    startTimeSlice: startTimeReducer
 });
 
 const persistConfig = {

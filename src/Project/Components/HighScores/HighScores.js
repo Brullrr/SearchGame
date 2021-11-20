@@ -29,16 +29,26 @@ const HighScores = () => {
             loadedScores.push({
                 id: key,
                 time: data[key].userTime,
-                name: data[key].userName
+                name: data[key].userName,
+                level: data[key].userLevel
+
             })
         }
         const sortedHighScores = loadedScores.sort(compare)
+        const hardHighScores = []
+        sortedHighScores.map((e) => {
+            if(e.level === 'hard') {
+                hardHighScores.push(e)
+            }
+        })
 
-        const finishedLoadedScores = sortedHighScores.map((e, index) => {
+        const finishedLoadedScores = hardHighScores.map((e, index) => {
+            
             return {
-                rank: index,
+                rank: index+1,
                 name: e.name,
                 time: e.time,
+                level: e.level,
                 key: e.key
             }
         })
@@ -65,13 +75,16 @@ const HighScores = () => {
             <div className={classes.ScoreHolder} >
                 {
                     highScoresArray.map((e) => {
-                        return (
-                            <div className={classes.ScoreList}>
-                                <p>{e.rank}</p>
-                                <p>{e.name}</p>    
-                                <p>{e.time}</p>
-                            </div>
-                        )
+                        if(e.rank <= 20) {
+                            return (
+                                <div key={e.rank} className={classes.ScoreList}>
+                                    <p>{e.rank}</p>
+                                    <p>{e.name}</p>    
+                                    <p>{e.time}</p>
+                                </div>
+                            )
+                        }
+                        
                     })
                 }
             </div>

@@ -7,7 +7,7 @@ import { levelSelectSliceActions } from '../../../../store/levelSelectSlice';
 import { gameOngoingSliceActions } from '../../../../store/gameOngoingSlice';
 import { backdropSliceActions } from '../../../../store/backdropSlice';
 import { addUserTime } from '../../../Utility/ServerRequests/addUserTime';
-
+import { startTimeSliceActions } from '../../../../store/startTimeSlice';
 
 
 const DifficultyButton = (props) => {
@@ -16,11 +16,13 @@ const DifficultyButton = (props) => {
     const userName = useSelector(state => state.playerNameSlice.playerName);
 
     
-    const sendRequest = () => {
+    const sendRequest = (level) => {
         let timeNow = Date.now();
+        dispatch(startTimeSliceActions.addStartTime(timeNow)) 
         addUserTime({
             user: userName,
-            timeStart: timeNow
+            timeStart: timeNow,
+            level: level
         });
     }
 
@@ -29,17 +31,19 @@ const DifficultyButton = (props) => {
             case 'Easy':
                 dispatch(levelSelectSliceActions.selectLevelEasy());
                 dispatch(backdropSliceActions.turnOffBackdrop());
-                sendRequest();
+                sendRequest('easy');
+
                 break;
             case 'Normal':
                 dispatch(levelSelectSliceActions.selectLevelNormal())
                 dispatch(backdropSliceActions.turnOffBackdrop())
-                sendRequest();
+                sendRequest('normal');
+
                 break;
             case 'Hard':
                 dispatch(levelSelectSliceActions.selectLevelHard())
                 dispatch(backdropSliceActions.turnOffBackdrop())
-                sendRequest();
+                sendRequest('hard');
                 break;
             default:
                 break;
