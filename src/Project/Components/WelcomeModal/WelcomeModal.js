@@ -4,21 +4,21 @@ import { FirstTimeStateSliceActions } from "../../../store/FirstTimeSlice";
 import { backdropSliceActions } from "../../../store/backdropSlice";
 import { playerNameSliceActions } from '../../../store/playerNameSlice';
 
-
 const WelcomeModal = () => {
-
-
     const dispatch = useDispatch();
-    const turnOffFirstTimeHandler = () => {
-        dispatch(FirstTimeStateSliceActions.changeToNotFirstTime())
-        dispatch(backdropSliceActions.turnOnBackdrop())
-    }
+    
 
     const playerName = useSelector(state => state.playerNameSlice.playerName)
     console.log('WelcomeModal playerNAme is   :   ' + playerName)
     const changePlayerNameHandler = (name) => {
         dispatch(playerNameSliceActions.changePlayerName(name))
     }
+    const turnOffFirstTimeHandler = () => {
+        dispatch(FirstTimeStateSliceActions.changeToNotFirstTime())
+        dispatch(backdropSliceActions.turnOnBackdrop())
+        
+    }
+
 
 
     return (
@@ -29,7 +29,7 @@ const WelcomeModal = () => {
             </div>
             <div className={classes.Form}>
                 <p className={classes.EnterP}>Enter your name below.</p>
-                <input onChange={(event) => {changePlayerNameHandler(event.target.value)}} className={classes.InputName} type='text' value={playerName} />
+                <input onChange={(event) => {changePlayerNameHandler(event.target.value)}} className={classes.InputName} type='text' value={playerName} minLength='3' maxLength='16' />
                 <button onClick={turnOffFirstTimeHandler} className={classes.EnterButton}>Enter</button>
             </div>
         </div>

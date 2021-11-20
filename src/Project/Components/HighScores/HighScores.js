@@ -1,112 +1,55 @@
+import { useEffect, useState, useCallback } from 'react';
 import { useDispatch } from 'react-redux';
 import { highScoresSliceActions } from '../../../store/highScoresSlice';
 import classes from './HighScores.module.css';
 
 
-const dummyData = [
-    {
-        name: 'Richard',
-        rank: 1,
-        time: '2:00'
-    },
-    {
-        name: 'Oscar',
-        rank: 2,
-        time: '3:00'
-    },
-    {
-        name: 'Cuong',
-        rank: 3,
-        time: '4:00'
-    },
-    {
-        name: 'Anthony',
-        rank: 4,
-        time: '5:00'
-    },
-    {
-        name: 'Richard',
-        rank: 5,
-        time: '2:00'
-    },
-    {
-        name: 'Oscar',
-        rank: 6,
-        time: '3:00'
-    },
-    {
-        name: 'Cuong',
-        rank: 7,
-        time: '4:00'
-    },
-    {
-        name: 'Anthony',
-        rank: 8,
-        time: '5:00'
-    },
-    {
-        name: 'Richard',
-        rank: 9,
-        time: '2:00'
-    },
-    {
-        name: 'Oscar',
-        rank: 10,
-        time: '3:00'
-    },
-    {
-        name: 'Cuong',
-        rank: 11,
-        time: '4:00'
-    },
-    {
-        name: 'Anthony',
-        rank: 12,
-        time: '5:00'
-    },
-    {
-        name: 'Richard',
-        rank: 13,
-        time: '2:00'
-    },
-    {
-        name: 'Oscar',
-        rank: 14,
-        time: '3:00'
-    },
-    {
-        name: 'Cuong',
-        rank: 15,
-        time: '4:00'
-    },
-    {
-        name: 'Anthony',
-        rank: 16,
-        time: '5:00'
-    },
-    {
-        name: 'Richard',
-        rank: 17,
-        time: '2:00'
-    },
-    {
-        name: 'Oscar',
-        rank: 18,
-        time: '3:00'
-    },
-    {
-        name: 'Cuong',
-        rank: 19,
-        time: '4:00'
-    },
-    {
-        name: 'Anthony',
-        rank: 20,
-        time: '5:00'
-    },
-]
 
 const HighScores = () => {
+
+
+    function compare( a, b ) {
+        if ( a.time < b.time ){
+          return -1;
+        }
+        if ( a.time > b.time ){
+          return 1;
+        }
+        return 0;
+      }
+
+    const [highScoresArray, setHighScoresArray] = useState([]);
+
+   
+    const getHighScores = useCallback( async () => {
+        const response = await fetch('https://searchgame-6b980-default-rtdb.firebaseio.com/highscores.json')
+        const data = await response.json();
+        const loadedScores = []
+        for (const key in data) {
+            loadedScores.push({
+                id: key,
+                time: data[key].userTime,
+                name: data[key].userName
+            })
+        }
+
+        const newLoadedScores = loadedScores.map((e, index) => {
+            return {
+                rank: index,
+                name: e.name,
+                time: e.time,
+                key: e.key
+            }
+        })
+        const sortedHighScores = newLoadedScores.sort(compare)
+        setHighScoresArray( sortedHighScores )
+    }, []);
+
+    useEffect(() => {
+        getHighScores();
+    }, [getHighScores])
+
+    
 
     const dispatch = useDispatch();
 
@@ -121,7 +64,7 @@ const HighScores = () => {
             </div>
             <div className={classes.ScoreHolder} >
                 {
-                    dummyData.map((e) => {
+                    highScoresArray.map((e) => {
                         return (
                             <div className={classes.ScoreList}>
                                 <p>{e.rank}</p>

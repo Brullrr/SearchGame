@@ -2,34 +2,44 @@ import classes from './DifficultyButton.module.css';
 import easy from '../../../Images/Easy.jpg';
 import normal from '../../../Images/Normal.jpg';
 import hard from '../../../Images/Hard.jpg';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { levelSelectSliceActions } from '../../../../store/levelSelectSlice';
 import { gameOngoingSliceActions } from '../../../../store/gameOngoingSlice';
 import { backdropSliceActions } from '../../../../store/backdropSlice';
-import { highScoresSliceActions } from '../../../../store/highScoresSlice';
+import { addUserTime } from '../../../Utility/ServerRequests/addUserTime';
 
 
 
 const DifficultyButton = (props) => {
 
     const dispatch = useDispatch();
+    const userName = useSelector(state => state.playerNameSlice.playerName);
+
+    
+    const sendRequest = () => {
+        let timeNow = Date.now();
+        addUserTime({
+            user: userName,
+            timeStart: timeNow
+        });
+    }
 
     const levelSelectedHandler = () => {
         switch (props.difficulty) {
             case 'Easy':
                 dispatch(levelSelectSliceActions.selectLevelEasy());
-                dispatch(backdropSliceActions.turnOffBackdrop())
+                dispatch(backdropSliceActions.turnOffBackdrop());
+                sendRequest();
                 break;
             case 'Normal':
                 dispatch(levelSelectSliceActions.selectLevelNormal())
                 dispatch(backdropSliceActions.turnOffBackdrop())
-
+                sendRequest();
                 break;
             case 'Hard':
                 dispatch(levelSelectSliceActions.selectLevelHard())
                 dispatch(backdropSliceActions.turnOffBackdrop())
-                
-
+                sendRequest();
                 break;
             default:
                 break;

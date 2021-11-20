@@ -3,11 +3,12 @@ import DifficultyButton from './Buttons/DifficultyButton';
 import {highScoresSliceActions} from '../../../store/highScoresSlice';
 import { useDispatch } from 'react-redux';
 
+
 const LevelSelect = () => {
     const dispatch = useDispatch();
     const highScoresClicked = () => {
         dispatch(highScoresSliceActions.turnOnhighScores());
-    } 
+    } ;
 
     return (
         <div className={classes.ModalBody}>

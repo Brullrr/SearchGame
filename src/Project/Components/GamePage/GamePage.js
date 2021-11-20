@@ -16,7 +16,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { wellDoneSliceActions } from '../../../store/wellDoneSlice';
 import { backdropSliceActions } from '../../../store/backdropSlice';
 
-
 const GamePage = (props) => {
 
     const disptach = useDispatch();
