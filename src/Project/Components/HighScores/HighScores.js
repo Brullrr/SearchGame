@@ -32,8 +32,9 @@ const HighScores = () => {
                 name: data[key].userName
             })
         }
+        const sortedHighScores = loadedScores.sort(compare)
 
-        const newLoadedScores = loadedScores.map((e, index) => {
+        const finishedLoadedScores = sortedHighScores.map((e, index) => {
             return {
                 rank: index,
                 name: e.name,
@@ -41,8 +42,7 @@ const HighScores = () => {
                 key: e.key
             }
         })
-        const sortedHighScores = newLoadedScores.sort(compare)
-        setHighScoresArray( sortedHighScores )
+        setHighScoresArray( finishedLoadedScores )
     }, []);
 
     useEffect(() => {
