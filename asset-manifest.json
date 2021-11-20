@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/SearchGame/static/css/main.c8730b8e.chunk.css",
-    "main.js": "/SearchGame/static/js/main.019ca978.chunk.js",
-    "main.js.map": "/SearchGame/static/js/main.019ca978.chunk.js.map",
+    "main.js": "/SearchGame/static/js/main.4c348b83.chunk.js",
+    "main.js.map": "/SearchGame/static/js/main.4c348b83.chunk.js.map",
     "runtime-main.js": "/SearchGame/static/js/runtime-main.6fba7ec4.js",
     "runtime-main.js.map": "/SearchGame/static/js/runtime-main.6fba7ec4.js.map",
     "static/js/2.ddde8d0f.chunk.js": "/SearchGame/static/js/2.ddde8d0f.chunk.js",
@@ -29,6 +29,6 @@
     "static/js/runtime-main.6fba7ec4.js",
     "static/js/2.ddde8d0f.chunk.js",
     "static/css/main.c8730b8e.chunk.css",
-    "static/js/main.019ca978.chunk.js"
+    "static/js/main.4c348b83.chunk.js"
   ]
 }
