@@ -72,8 +72,8 @@ const GamePage = (props) => {
         
     })
 
-    const searchingFor = (e) => {
-        checkIfFound(e.num, e.clientWidth)
+    const searchingFor = (e, element) => {
+        checkIfFound(e.num, element.clientX)
     }
 
     
@@ -291,7 +291,7 @@ const GamePage = (props) => {
                 {charactersToFind.map((e) => <img src={e.sourceImage} 
                                                   key={e.num}
                                                   className={classes.DropDownCharacter} 
-                                                  onClick={() => {searchingFor(e)}} 
+                                                  onClick={(element) => {searchingFor(e, element)}} 
                                                   alt='Character'/>)}
 
             </div> : null}
