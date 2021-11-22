@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/SearchGame/static/css/main.c8730b8e.chunk.css",
-    "main.js": "/SearchGame/static/js/main.4c348b83.chunk.js",
-    "main.js.map": "/SearchGame/static/js/main.4c348b83.chunk.js.map",
+    "main.css": "/SearchGame/static/css/main.6a4da9b5.chunk.css",
+    "main.js": "/SearchGame/static/js/main.b0a76765.chunk.js",
+    "main.js.map": "/SearchGame/static/js/main.b0a76765.chunk.js.map",
     "runtime-main.js": "/SearchGame/static/js/runtime-main.6fba7ec4.js",
     "runtime-main.js.map": "/SearchGame/static/js/runtime-main.6fba7ec4.js.map",
     "static/js/2.ddde8d0f.chunk.js": "/SearchGame/static/js/2.ddde8d0f.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.6fd129c0.chunk.js": "/SearchGame/static/js/3.6fd129c0.chunk.js",
     "static/js/3.6fd129c0.chunk.js.map": "/SearchGame/static/js/3.6fd129c0.chunk.js.map",
     "index.html": "/SearchGame/index.html",
-    "static/css/main.c8730b8e.chunk.css.map": "/SearchGame/static/css/main.c8730b8e.chunk.css.map",
+    "static/css/main.6a4da9b5.chunk.css.map": "/SearchGame/static/css/main.6a4da9b5.chunk.css.map",
     "static/js/2.ddde8d0f.chunk.js.LICENSE.txt": "/SearchGame/static/js/2.ddde8d0f.chunk.js.LICENSE.txt",
     "static/media/Easy.87b42cf8.jpg": "/SearchGame/static/media/Easy.87b42cf8.jpg",
     "static/media/EasyCharacterOne.5be51d75.PNG": "/SearchGame/static/media/EasyCharacterOne.5be51d75.PNG",
@@ -28,7 +28,7 @@
   "entrypoints": [
     "static/js/runtime-main.6fba7ec4.js",
     "static/js/2.ddde8d0f.chunk.js",
-    "static/css/main.c8730b8e.chunk.css",
-    "static/js/main.4c348b83.chunk.js"
+    "static/css/main.6a4da9b5.chunk.css",
+    "static/js/main.b0a76765.chunk.js"
   ]
 }
