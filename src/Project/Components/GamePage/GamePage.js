@@ -73,13 +73,13 @@ const GamePage = (props) => {
     })
 
     const searchingFor = (e) => {
-        checkIfFound(e)
+        checkIfFound(e.num, e.clientWidth)
     }
 
     
     //Move to Data Base: 
 
-    const checkIfFound = (imageNumber) => {
+    const checkIfFound = (imageNumber, imageWidth) => {
         
         if(props.level === 'Easy') {
             let characterOneAlive = false;
@@ -187,9 +187,9 @@ const GamePage = (props) => {
             charactersToFind.forEach(e => e.num === 1 ? characterOneAlive = true : null)
             if(imageNumber === 1 && characterOneAlive) {
 
-                alert('X is:   '  + ((window.clientWidth/window.innerWidth) +  clickedX) + 
-                '    Y is:   '  + ((window.clientWidth/window.innerWidth) + clickedY) + 
-                '   client / windows inner width:  ' + (window.clientWidth/window.innerWidth))
+                alert('X is:   '  + ((imageWidth/window.innerWidth) +  clickedX) + 
+                '    Y is:   '  + ((imageWidth/window.innerWidth) + clickedY) + 
+                '   client / windows inner width:  ' + (imageWidth/window.innerWidth))
                 
                 if(clickedX > 716 && clickedX < 739 && clickedY > 805 && clickedY < 836) {
                     
@@ -291,7 +291,7 @@ const GamePage = (props) => {
                 {charactersToFind.map((e) => <img src={e.sourceImage} 
                                                   key={e.num}
                                                   className={classes.DropDownCharacter} 
-                                                  onClick={() => {searchingFor(e.num)}} 
+                                                  onClick={() => {searchingFor(e)}} 
                                                   alt='Character'/>)}
 
             </div> : null}
