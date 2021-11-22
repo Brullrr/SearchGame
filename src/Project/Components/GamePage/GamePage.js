@@ -186,8 +186,8 @@ const GamePage = (props) => {
             let characterOneAlive = false;
             charactersToFind.forEach(e => e.num === 1 ? characterOneAlive = true : null)
             if(imageNumber === 1 && characterOneAlive) {
-                console.log('X is:   '  + clickedX)
-                console.log('Y is:   '  + clickedY)
+                alert('X is:   '  + clickedX + '    Y is:   '  + clickedY)
+                
                 if(clickedX > 716 && clickedX < 739 && clickedY > 805 && clickedY < 836) {
                     
                 charactersToFind.forEach((e, index) => {
