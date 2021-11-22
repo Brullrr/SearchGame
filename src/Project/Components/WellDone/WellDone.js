@@ -13,10 +13,10 @@ const WellDone = () => {
     let correctTime = ''
     let level = 'unknown'
     const timeStoredFromState = useSelector(state => state.startTimeSlice.startTime)
-    console.log('Time in state:   ' + timeStoredFromState)
+    
 
     timesSaved.forEach(e=> {
-        console.log('Time in state:   ' + timeStoredFromState)
+        console.log('User Time:   ' + userTime)
         if(e.time === timeStoredFromState) {
             correctTime = e.time
             level = e.level
@@ -52,16 +52,16 @@ const WellDone = () => {
     
 
     useEffect(() => {
-        setUserTime((Date.now() - timeToReduce)/1000 )
-        if(userTime > 1000){
+         setUserTime((Date.now() - timeToReduce)/1000 )
+        if((Date.now() - timeStoredFromState)/1000 > 0 && level != 'unknown'){
             addHighScore({
                 userName:  userName,
-                userTime: (Date.now() - timeToReduce)/1000,
+                userTime: (Date.now() - timeStoredFromState)/1000,
                 userLevel: level
             });
         }
         
-    }, [addHighScore, timeToReduce, userName, level]);
+    }, [timeToReduce, userName, level, timeStoredFromState]);
 
 
     const goToLevelSelect = () => {

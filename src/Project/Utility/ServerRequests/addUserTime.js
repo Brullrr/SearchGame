@@ -7,6 +7,6 @@ export const addUserTime = async (time) => {
         }
     });
     const data = await response.json();
-    
+    console.log('[Response Received] ' + data)
 }
 

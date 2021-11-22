@@ -36,7 +36,7 @@ const HighScores = () => {
         }
         const sortedHighScores = loadedScores.sort(compare)
         const hardHighScores = []
-        sortedHighScores.map((e) => {
+        sortedHighScores.forEach((e) => {
             if(e.level === 'hard') {
                 hardHighScores.push(e)
             }
@@ -75,15 +75,15 @@ const HighScores = () => {
             <div className={classes.ScoreHolder} >
                 {
                     highScoresArray.map((e) => {
-                        if(e.rank <= 20) {
+                        
                             return (
-                                <div key={e.rank} className={classes.ScoreList}>
+                                e.rank <= 20 && <div key={e.rank} className={classes.ScoreList}>
                                     <p>{e.rank}</p>
                                     <p>{e.name}</p>    
                                     <p>{e.time}</p>
                                 </div>
                             )
-                        }
+                        
                         
                     })
                 }

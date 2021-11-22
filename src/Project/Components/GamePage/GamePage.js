@@ -30,7 +30,7 @@ const GamePage = (props) => {
     if(beginningClass === classes.GamePageHeadingBegin) {
         setTimeout(() => {
             setbeginningClass(classes.GamePageHeading)
-        }, 6000);
+        }, 3000);
     }
 
     const [beginningTextClass, setBeginningTextClass ] = useState(classes.GamePageTextBegin)
@@ -38,14 +38,14 @@ const GamePage = (props) => {
     if(beginningTextClass === classes.GamePageTextBegin) {
         setTimeout(() => {
             setBeginningTextClass(classes.GamePageText)
-        }, 6000);
+        }, 3000);
     }
     const [beginningImageClass, setBeginningImageClass ] = useState(classes.GameImageBegin)
 
     if(beginningImageClass === classes.GameImageBegin) {
         setTimeout(() => {
             setBeginningImageClass(classes.GameImage)
-        }, 6000);
+        }, 3000);
     }
     const [clickedX, setClickedX] = useState('')
     const changeClickedX = (event) => {setClickedX( ((((event.clientX + window.scrollX)) -  (window.innerWidth/6.6)) ) )}
@@ -186,8 +186,9 @@ const GamePage = (props) => {
             let characterOneAlive = false;
             charactersToFind.forEach(e => e.num === 1 ? characterOneAlive = true : null)
             if(imageNumber === 1 && characterOneAlive) {
-                
-                if(clickedX > 716 && clickedX < 739 && clickedY > 816 && clickedY < 836) {
+                console.log('X is:   '  + clickedX)
+                console.log('Y is:   '  + clickedY)
+                if(clickedX > 716 && clickedX < 739 && clickedY > 805 && clickedY < 836) {
                     
                 charactersToFind.forEach((e, index) => {
                     if(e.num === 1) {
@@ -203,7 +204,7 @@ const GamePage = (props) => {
             charactersToFind.forEach(e => e.num === 2 ? characterTwoAlive = true : null)
             if(imageNumber === 2 && characterTwoAlive) {
                 
-                if(clickedX > 927 && clickedX < 944 && clickedY > 908 && clickedY < 922) {
+                if(clickedX > 927 && clickedX < 944 && clickedY > 900 && clickedY < 922) {
                     
                 charactersToFind.forEach((e, index) => {
                     if(e.num === 2) {
@@ -219,7 +220,7 @@ const GamePage = (props) => {
             charactersToFind.forEach(e => e.num === 3 ? characterThreeAlive = true : null)
             if(imageNumber === 3 && characterThreeAlive) {
                 
-                if(clickedX > 983 && clickedX < 995 && clickedY > 377 && clickedY < 390) {
+                if(clickedX > 983 && clickedX < 995 && clickedY > 370 && clickedY < 390) {
                     
                 charactersToFind.forEach((e, index) => {
                     if(e.num === 3) {

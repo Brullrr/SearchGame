@@ -7,5 +7,7 @@ export const addHighScore = async (highScore) => {
         }
     });
     const data = await response.json();
+    console.log('[Response Received] ' + data)
+
 }
 
