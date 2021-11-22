@@ -189,6 +189,8 @@ const GamePage = (props) => {
 
                 alert('X is:   '  + ((imageWidth/window.innerWidth) +  clickedX) + 
                 '    Y is:   '  + ((imageWidth/window.innerWidth) + clickedY) + 
+                '   image width is :  ' + (imageWidth) + 
+                '   inner width is:  ' + (window.innerWidth) +
                 '   client / windows inner width:  ' + (imageWidth/window.innerWidth))
                 
                 if(clickedX > 716 && clickedX < 739 && clickedY > 805 && clickedY < 836) {
