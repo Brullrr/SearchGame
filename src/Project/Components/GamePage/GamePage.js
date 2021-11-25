@@ -84,8 +84,10 @@ const GamePage = (props) => {
         if(props.level === 'Easy') {
             let characterOneAlive = false;
             charactersToFind.forEach(e => e.num === 1 ? characterOneAlive = true : null)
+            let XAxisCoords = window.innerWidth < 400 ?  (clickedX - (clickedX/5.5)) : clickedX
+            let YAxisCoords = window.innerWidth < 400 ?  (clickedY - (clickedY/5.5)) : clickedY
             if(imageNumber === 1 && characterOneAlive) {
-                if(clickedX > 345 && clickedX < 428 && clickedY > 245 && clickedY < 330) {
+                if(XAxisCoords > 345 && XAxisCoords < 428 && YAxisCoords > 245 && YAxisCoords < 330) {
                     
                 charactersToFind.forEach((e, index) => {
                     if(e.num === 1) {
@@ -101,7 +103,7 @@ const GamePage = (props) => {
             charactersToFind.forEach(e => e.num === 2 ? characterTwoAlive = true : null)
             if(imageNumber === 2 && characterTwoAlive) {
                 
-                if(clickedX > 173 && clickedX < 219 && clickedY > 550 && clickedY < 630) {
+                if(XAxisCoords > 173 && XAxisCoords < 219 && YAxisCoords > 550 && YAxisCoords < 630) {
                     
                 charactersToFind.forEach((e, index) => {
                     if(e.num === 2) {
@@ -117,7 +119,7 @@ const GamePage = (props) => {
             charactersToFind.forEach(e => e.num === 3 ? characterThreeAlive = true : null)
             if(imageNumber === 3 && characterThreeAlive) {
                 
-                if(clickedX > 725 && clickedX < 825 && clickedY > 820 && clickedY < 855) {
+                if(XAxisCoords > 725 && XAxisCoords < 825 && YAxisCoords > 820 && YAxisCoords < 855) {
                     
                 charactersToFind.forEach((e, index) => {
                     if(e.num === 3) {
@@ -134,9 +136,11 @@ const GamePage = (props) => {
         if(props.level === 'Normal') {
             let characterOneAlive = false;
             charactersToFind.forEach(e => e.num === 1 ? characterOneAlive = true : null)
+            let XAxisCoords = window.innerWidth < 400 ?  (clickedX - (clickedX/5.5)) : clickedX
+            let YAxisCoords = window.innerWidth < 400 ?  (clickedY - (clickedY/5.5)) : clickedY
             if(imageNumber === 1 && characterOneAlive) {
                 
-                if(clickedX > 642 && clickedX < 892 && clickedY > 910 && clickedY < 940) {
+                if(XAxisCoords > 642 && XAxisCoords < 892 && YAxisCoords > 910 && YAxisCoords < 940) {
                     
                 charactersToFind.forEach((e, index) => {
                     if(e.num === 1) {
@@ -152,7 +156,7 @@ const GamePage = (props) => {
             charactersToFind.forEach(e => e.num === 2 ? characterTwoAlive = true : null)
             if(imageNumber === 2 && characterTwoAlive) {
                 
-                if(clickedX > 836 && clickedX < 906 && clickedY > 132 && clickedY < 185) {
+                if(XAxisCoords > 836 && XAxisCoords < 906 && YAxisCoords > 132 && YAxisCoords < 185) {
                     
                 charactersToFind.forEach((e, index) => {
                     if(e.num === 2) {
@@ -168,7 +172,7 @@ const GamePage = (props) => {
             charactersToFind.forEach(e => e.num === 3 ? characterThreeAlive = true : null)
             if(imageNumber === 3 && characterThreeAlive) {
                 
-                if(clickedX > 166 && clickedX < 199 && clickedY > 182 && clickedY < 204) {
+                if(XAxisCoords > 166 && XAxisCoords < 199 && YAxisCoords > 182 && YAxisCoords < 204) {
                     
                 charactersToFind.forEach((e, index) => {
                     if(e.num === 3) {
@@ -185,12 +189,11 @@ const GamePage = (props) => {
         if(props.level === 'Hard') {
             let characterOneAlive = false;
             charactersToFind.forEach(e => e.num === 1 ? characterOneAlive = true : null)
+            let XAxisCoords = window.innerWidth < 400 ?  (clickedX - (clickedX/5.5)) : clickedX
+            let YAxisCoords = window.innerWidth < 400 ?  (clickedY - (clickedY/5.5)) : clickedY
             if(imageNumber === 1 && characterOneAlive) {
 
-                
-                let XAxisCoords = window.innerWidth < 400 ?  (clickedX - (clickedX/5.5)) : clickedX
-                let YAxisCoords = window.innerWidth < 400 ?  (clickedY - (clickedY/5.5)) : clickedY
-                alert('y is:   '   +  (clickedY - (clickedY/5.5)) )
+              
                 if(XAxisCoords > 716 && XAxisCoords < 739 && YAxisCoords > 805 && YAxisCoords < 836) {
                     
                 charactersToFind.forEach((e, index) => {
@@ -207,7 +210,7 @@ const GamePage = (props) => {
             charactersToFind.forEach(e => e.num === 2 ? characterTwoAlive = true : null)
             if(imageNumber === 2 && characterTwoAlive) {
                 
-                if(clickedX > 927 && clickedX < 944 && clickedY > 900 && clickedY < 922) {
+                if(XAxisCoords > 927 && XAxisCoords < 944 && YAxisCoords > 900 && YAxisCoords < 922) {
                     
                 charactersToFind.forEach((e, index) => {
                     if(e.num === 2) {
@@ -223,7 +226,7 @@ const GamePage = (props) => {
             charactersToFind.forEach(e => e.num === 3 ? characterThreeAlive = true : null)
             if(imageNumber === 3 && characterThreeAlive) {
                 
-                if(clickedX > 983 && clickedX < 995 && clickedY > 370 && clickedY < 390) {
+                if(XAxisCoords > 983 && XAxisCoords < 995 && YAxisCoords > 370 && YAxisCoords < 390) {
                     
                 charactersToFind.forEach((e, index) => {
                     if(e.num === 3) {
