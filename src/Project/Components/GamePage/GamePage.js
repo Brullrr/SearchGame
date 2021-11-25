@@ -187,9 +187,11 @@ const GamePage = (props) => {
             charactersToFind.forEach(e => e.num === 1 ? characterOneAlive = true : null)
             if(imageNumber === 1 && characterOneAlive) {
 
-                alert('X is:   '   +  (clickedX - (clickedX/5.5)) )
+                
                 let XAxisCoords = window.innerWidth < 400 ?  (clickedX - (clickedX/5.5)) : clickedX
-                if(XAxisCoords > 716 && XAxisCoords < 739 && clickedY > 805 && clickedY < 836) {
+                let YAxisCoords = window.innerWidth < 400 ?  (clickedY - (clickedY/5.5)) : clickedY
+                alert('y is:   '   +  (clickedY - (clickedY/5.5)) )
+                if(XAxisCoords > 716 && XAxisCoords < 739 && YAxisCoords > 805 && YAxisCoords < 836) {
                     
                 charactersToFind.forEach((e, index) => {
                     if(e.num === 1) {
