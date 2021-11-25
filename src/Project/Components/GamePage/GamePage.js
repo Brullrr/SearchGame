@@ -83,7 +83,9 @@ const GamePage = (props) => {
         let XAxisCoords = window.innerWidth < 400 ?  (clickedX - (clickedX/5.5)) : clickedX
         let YAxisCoords = window.innerWidth < 400 ?  (clickedY - (clickedY/5.5)) : clickedY
         alert('X is:   ' + XAxisCoords +
-            'Y is:  '  +  YAxisCoords)
+            '  Y is:  '  +  YAxisCoords 
+            
+            + '  inner width:   ' + window.innerWidth + '  inner height:   ' + window.innerHeight )
 
         if(props.level === 'Easy') {
             let characterOneAlive = false;
