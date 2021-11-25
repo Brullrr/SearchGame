@@ -80,7 +80,11 @@ const GamePage = (props) => {
     //Move to Data Base: 
 
     const checkIfFound = (imageNumber, imageWidth) => {
-        
+        let XAxisCoords = window.innerWidth < 400 ?  (clickedX - (clickedX/5.5)) : clickedX
+        let YAxisCoords = window.innerWidth < 400 ?  (clickedY - (clickedY/5.5)) : clickedY
+        alert('X is:   ' + XAxisCoords +
+            'Y is:  '  +  YAxisCoords)
+
         if(props.level === 'Easy') {
             let characterOneAlive = false;
             charactersToFind.forEach(e => e.num === 1 ? characterOneAlive = true : null)
